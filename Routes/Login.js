@@ -4,7 +4,7 @@ const User = require("../Models/User");
 const { body, validationResult } = require("express-validator");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const jwtSecret = process.env.JWT_SECRET;
+const jwtSecret = process.env.JWT_KEY;
 
 
 Router.post(
