@@ -3,7 +3,7 @@ var app = express();
 var mongo = require('./Db/conn.js');
 mongo();
 var port = process.env.PORT || 3000;
-const path = require('path');
+// const path = require('path');
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -24,10 +24,10 @@ app.use('/api', require('./Routes/CreateUser.js'));
 app.use('/api', require('./Routes/Login.js'));
 // app.use('/api', require('./Routes/GetData.js'));
 
-app.use(express.static(path.join(__dirname, '../build')));
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../build/index.html'));
-});
+// app.use(express.static(path.join(__dirname, '../build')));
+// app.get('*', function (req, res) {
+//   res.sendFile(path.join(__dirname, '../build/index.html'));
+// });
 
 
 
