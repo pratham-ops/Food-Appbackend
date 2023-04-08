@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/food';
+const mongoUrl = process.env.MONGO_URL ;
 
 const MongoDb = async () => {
     try {
